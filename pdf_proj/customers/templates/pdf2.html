@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tampil PDF</title>
+</head>
+<body>
+    <img src="static/logo.jpg" alt="gambar tidak tersedia" height="200px">
+    <h1>CAB.INC</h1>
+    <p>opensource accounting software</p>
+    <p>Nama Customer</p>{{customer}}
+    <hr>
+    {{customer.description|linebreaks}}
+    <br>
+    {{customer.logo}}
+    <br>
+    {{customer.logo.url}}
+    <br>
+    {{customer.logo.path}}
+    
+
+    <img src="{{customer.logo.path}}" alt="gambar tidak tersedia" height="200px">
+    
+</body>
+</html>
